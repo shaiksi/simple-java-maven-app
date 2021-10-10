@@ -66,12 +66,12 @@ pipeline{
                 sh "mvn -gs ${WORKSPACE}/settings.xml deploy"
                }
             }
-            /*   by shaik   dvd */
+            /*   by shaik   */
         stage ("Ansible"){
             steps{
 
                         ansible-playbook ping.yml
-                  }
+                 }
             }
     }
     post{
