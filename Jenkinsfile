@@ -68,7 +68,6 @@ pipeline{
             }
         stage ("Ansible"){
             steps{
-
                  ansible-playbook ping.yml
             }
         }
