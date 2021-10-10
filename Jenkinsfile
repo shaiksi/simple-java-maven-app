@@ -71,8 +71,8 @@ pipeline{
             steps{
 
                         ansible-playbook ping.yml
-                 }
             }
+        }
     }
     post{
         always{
