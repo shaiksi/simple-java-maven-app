@@ -45,7 +45,7 @@ pipeline{
                 }
             }
            
-            }
+        }  
         /*stage ("sonar scanning") {
             steps {
                 script { 
@@ -60,17 +60,18 @@ pipeline{
                     }
                }
             }
-        }*/
+        }
         stage ("Upload to Nexus") {
             steps {
                 sh "mvn -gs ${WORKSPACE}/settings.xml deploy"
                }
-            }
+        }
         stage ("Ansible"){
             steps{
+                
                  ansible-playbook ping.yml
             }
-        }
+        }*/
     }
     post{
         always{
